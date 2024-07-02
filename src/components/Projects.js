@@ -1,9 +1,14 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import ProjectCard from "./ProjectCard";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Kamgar Info Website",
+      title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
     },
@@ -35,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="projects" id="projects">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
@@ -47,7 +52,14 @@ const Projects = () => {
               veritatis fuga sit. Suscipit?
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav variant="pills" defaultActiveKey="/home">
+              <Nav
+                variant="pills"
+                defaultActiveKey="first"
+                className="nav-pills
+                mb-5 justify-content-center align-items-center
+                "
+                id="pills-tab"
+              >
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab 1</Nav.Link>
                 </Nav.Item>
@@ -62,7 +74,7 @@ const Projects = () => {
                 <Tab.Pane eventKey="first">
                   <Row>
                     {projects.map((project, index) => {
-                      return <p>{project.title}</p>;
+                      return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
@@ -73,6 +85,7 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
+      <img src={colorSharp2} className="background-image-right" alt="img" />
     </section>
   );
 };
