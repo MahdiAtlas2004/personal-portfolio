@@ -87,7 +87,7 @@ const Contact = () => {
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
                   />
                 </Col>
-                <Col>
+                <Col sm={12} className="px-1">
                   <textarea
                     rows="6"
                     value={formDetails.message}
