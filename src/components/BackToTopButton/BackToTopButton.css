@@ -1,0 +1,25 @@
+.back-to-top-button {
+    position: fixed;
+    bottom: 12px;
+    right: 24px;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  
+  .back-to-top-button.show {
+    opacity: 1;
+  }
+  
+  .back-to-top-button button {
+    background-color: rgb(61, 67, 70);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .back-to-top-button button:hover {
+    background-color: #1d66b4;
+  }
+  
