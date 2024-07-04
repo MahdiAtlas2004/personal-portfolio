@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon1 from "../assets/img/nav-icon1.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon3 from "../assets/img/nav-icon3.svg";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -26,7 +26,7 @@ function NavBar() {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+  };
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -44,7 +44,7 @@ function NavBar() {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink('home')}
+              onClick={() => onUpdateActiveLink("home")}
             >
               Home
             </Nav.Link>
@@ -53,7 +53,7 @@ function NavBar() {
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink('skills')}
+              onClick={() => onUpdateActiveLink("skills")}
             >
               Skills
             </Nav.Link>
@@ -62,16 +62,34 @@ function NavBar() {
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink('projects')}
+              onClick={() => onUpdateActiveLink("projects")}
             >
               Projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon align-items-center d-flex">
-              <a href="#"><img src={navIcon1} alt=""/></a>
-              <a href="#"><img src={navIcon2} alt="" className="github"/></a>
-              <a href="#"><img src={navIcon3} alt="" className="telegram"/></a>
+              <a
+                href="https://linkedin.com/in/mahdi-atlas-59258a289"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={navIcon1} alt="" />
+              </a>
+              <a
+                href="https://github.com/MahdiAtlas2004"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={navIcon2} alt="" className="github" />
+              </a>
+              <a
+                href="https://t.me/MahdiAtlas"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={navIcon3} alt="" className="telegram" />
+              </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
               Let's Connect
