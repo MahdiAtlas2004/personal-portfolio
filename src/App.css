@@ -283,7 +283,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: relative;
     background-color: transparent;
     transition: 0.3s ease-in-out;
-}
+  }
+  .banner p {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+    text-align: justify;
+  }
 }
 .banner .tagline {
   font-weight: 700;
