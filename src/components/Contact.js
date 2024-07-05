@@ -1,120 +1,105 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const formInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  };
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
-
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
-  };
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
+    emailjs
+      .sendForm(
+        "service_8p9li7p",
+        "template_9p4fx3j",
+        e.target,
+        "Phj6W0Xc1igo9lqXE"
+      )
+      .then((response) => {
+        console.log("Email successfully sent!", response);
+        // Display success message using SweetAlert
+        Swal.fire({
+          title: "Successful !",
+          text: "Your message has been sent successfully.",
+          icon: "success",
+          confirmButtonText: "Confirm",
+        });
+        // This command reset the form after submiting
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        //Error message.
+        // Display error message using SweetAlert
+        Swal.fire({
+          title: "Error !",
+          text: "We encountered a problem while sending the message, please try again.",
+          icon: "error",
+          confirmButtonText: "Confirm",
+        });
       });
-    }
   };
+
+  
 
   return (
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <img src={contactImg} alt="Contact Us" data-aos="zoom-out-right"/>
+            <img src={contactImg} alt="Contact Us" data-aos="zoom-out-right" />
           </Col>
           <Col md={6}>
             <h2>Get In Touch</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={sendEmail}>
               <Row>
                 <Col sm={6} className="px-1">
                   <input
                     type="text"
-                    value={formDetails.firstName}
                     placeholder="First Name"
-                    onChange={(e) => onFormUpdate("firstName", e.target.value)}
                     data-aos="zoom-in"
+                    name="user_name"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
                     type="text"
-                    value={formDetails.lastName}
                     placeholder="Last Name"
-                    onChange={(e) => onFormUpdate("lastName", e.target.value)}
                     data-aos="zoom-in"
+                    name="user_last_name"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
                     type="email"
-                    value={formDetails.email}
                     placeholder="Email Address"
-                    onChange={(e) => onFormUpdate("email", e.target.value)}
                     data-aos="zoom-in"
+                    name="user_email"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
                     type="tel"
-                    value={formDetails.phone}
                     placeholder="Phone No."
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
                     data-aos="zoom-in"
+                    name="user_phone"
                   />
                 </Col>
                 <Col sm={12} className="px-1">
                   <textarea
                     rows="6"
-                    value={formDetails.message}
                     placeholder="Message"
-                    onChange={(e) => onFormUpdate("message", e.target.value)}
                     data-aos="zoom-in"
+                    name="user_message"
                   ></textarea>
                   <button type="submit">
-                    <span>{buttonText}</span>
+                    <span>Send</span>
                   </button>
-                </Col>
-                <Col>
-                  <p
-                    className={status.success === false ? "danger" : "success"}
-                  >
-                    {status.message}
-                  </p>
                 </Col>
               </Row>
             </form>
