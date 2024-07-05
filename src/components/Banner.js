@@ -58,6 +58,7 @@ const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
                     {"Hi I'm Mahdi Atlas "}
+                    <br />
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
@@ -66,9 +67,11 @@ const Banner = () => {
                     libero dicta possimus dolorum maiores et ducimus natus aut
                     quas quod laborum unde provident? Laboriosam, itaque.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let's Connect <ArrowRightCircle size={25} />
+                  <a href="/cv.pdf" className="cv" download="My_CV.pdf">
+                  <button>
+                    Download CV <ArrowRightCircle size={25} />
                   </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
