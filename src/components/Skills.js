@@ -42,11 +42,8 @@ const Skills = () => {
           <Col>
             <div className="skill-bx" data-aos="fade-up">
               <h2>Skills</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur aliquam ab totam fugiat nam, doloribus odio eum ut
-                qui hic, voluptatem non tenetur odit esse reiciendis temporibus
-                perferendis unde architecto.
+              <p className="skills-p">
+              With a strong foundation in web development, I excel at creating dynamic and responsive user interfaces. My expertise lies in bringing innovative designs to life and ensuring seamless user experiences. Proficient in the latest development tools and technologies, I am committed to delivering high-quality, maintainable code.
               </p>
               <Carousel
                 responsive={responsive}

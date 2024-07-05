@@ -53,11 +53,8 @@ const Projects = () => {
           <Col>
             <div data-aos="fade-up">
               <h2>Projects</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Commodi quae perspiciatis corporis nostrum. Cum ex voluptatem,
-                labore natus, in est eveniet, quisquam itaque distinctio rem quo
-                veritatis fuga sit. Suscipit?
+              <p className="projects-p">
+              In my portfolio, you'll find a collection of projects that highlight my skills in frontend web development. These projects demonstrate my ability to create visually appealing and responsive web pages. Each project reflects my commitment to clean, maintainable code and effective design principles.
               </p>
             </div>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">

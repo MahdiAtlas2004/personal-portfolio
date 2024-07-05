@@ -294,6 +294,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 96%;
     text-align: justify;
   }
+  .project {
+    padding-top: 0 !important;
+  }
 }
 .banner .tagline {
   font-weight: 700;
@@ -418,7 +421,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 85%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -603,7 +606,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 0 0 8px 0;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
@@ -684,11 +687,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .my-logo {
   text-align: center;
 }
-
 .cv {
   text-decoration: none;
 }
-
 .contact img {
   animation: updown 3s linear infinite;
+}
+.skills-p {
+  text-align: left;
 }

@@ -68,10 +68,7 @@ const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laudantium aperiam incidunt asperiores. Porro eveniet,
-                    libero dicta possimus dolorum maiores et ducimus natus aut
-                    quas quod laborum unde provident? Laboriosam, itaque.
+                  Hi, I'm Mahdi Atlas, a passionate frontend web developer. I specialize in creating responsive, user-friendly web applications using the latest technologies. With a keen eye for design and a strong foundation in coding, I aim to deliver seamless and engaging user experiences. Let's bring your ideas to life on the web!
                   </p>
                   <a href="/cv.pdf" className="cv" download="My_CV.pdf">
                     <button>
