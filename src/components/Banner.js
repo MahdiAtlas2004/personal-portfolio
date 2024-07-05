@@ -4,11 +4,13 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = ["Web Developer", "Web Designer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -19,6 +21,10 @@ const Banner = () => {
     }, delta);
     return () => clearInterval(ticker);
   }, [text]);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -68,16 +74,16 @@ const Banner = () => {
                     quas quod laborum unde provident? Laboriosam, itaque.
                   </p>
                   <a href="/cv.pdf" className="cv" download="My_CV.pdf">
-                  <button>
-                    Download CV <ArrowRightCircle size={25} />
-                  </button>
+                    <button>
+                      Download CV <ArrowRightCircle size={25} />
+                    </button>
                   </a>
                 </div>
               )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt="Header Img" />
+            <img src={headerImg} alt="Header Img" data-aos="zoom-in" />
           </Col>
         </Row>
       </Container>

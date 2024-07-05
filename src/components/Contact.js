@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const formInitialDetails = {
@@ -20,6 +22,10 @@ const Contact = () => {
       [category]: value,
     });
   };
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +55,7 @@ const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <img src={contactImg} alt="Contact Us" />
+            <img src={contactImg} alt="Contact Us" data-aos="zoom-out-right"/>
           </Col>
           <Col md={6}>
             <h2>Get In Touch</h2>
@@ -61,6 +67,7 @@ const Contact = () => {
                     value={formDetails.firstName}
                     placeholder="First Name"
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
+                    data-aos="zoom-in"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
@@ -69,6 +76,7 @@ const Contact = () => {
                     value={formDetails.lastName}
                     placeholder="Last Name"
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
+                    data-aos="zoom-in"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
@@ -77,6 +85,7 @@ const Contact = () => {
                     value={formDetails.email}
                     placeholder="Email Address"
                     onChange={(e) => onFormUpdate("email", e.target.value)}
+                    data-aos="zoom-in"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
@@ -85,6 +94,7 @@ const Contact = () => {
                     value={formDetails.phone}
                     placeholder="Phone No."
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
+                    data-aos="zoom-in"
                   />
                 </Col>
                 <Col sm={12} className="px-1">
@@ -93,6 +103,7 @@ const Contact = () => {
                     value={formDetails.message}
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
+                    data-aos="zoom-in"
                   ></textarea>
                   <button type="submit">
                     <span>{buttonText}</span>
