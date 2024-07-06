@@ -2,43 +2,46 @@ import { useEffect } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import kamgarInfoWebsite from "../assets/img/kamgar-info-website.png";
+import bootstrapFirst from "../assets/img/bootstrap-first.png";
+import bootstrapSecond from "../assets/img/bootstrap-second.png";
+import bootstrapThird from "../assets/img/bootstrap-third.png";
+import bootstrapFourth from "../assets/img/bootstrap-fourth.png";
+import alisinaPortfolio from "../assets/img/alisina-portfolio.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Kamgar Info Website",
+      description: "Portfolio Website",
+      imgUrl: kamgarInfoWebsite,
+    },
+    {
+      title: "Bootstrap First",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: bootstrapFirst,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: bootstrapSecond,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: bootstrapThird,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: bootstrapFourth,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Haidari Portfolio",
+      description: "Portfolio Website",
+      imgUrl: alisinaPortfolio,
     },
   ];
 

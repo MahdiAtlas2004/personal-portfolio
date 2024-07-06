@@ -51,35 +51,35 @@ const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter3} alt="Image" />
+                  <img src={meter3} alt="Image1" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="Image2" />
                   <h5>HTML</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="Image3" />
                   <h5>CSS</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="Image4" />
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
+                  <img src={meter3} alt="Image5" />
                   <h5>Bootstrap</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="Image6" />
                   <h5>Git</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="Image7" />
                   <h5>GitHub</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="Image8" />
                   <h5>jQuery</h5>
                 </div>
               </Carousel>
@@ -87,7 +87,7 @@ const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img src={colorSharp} className="background-image-left" alt="Background-image" />
+      <img src={colorSharp} className="background-image-left" alt="Background-image1" />
     </section>
   );
 };

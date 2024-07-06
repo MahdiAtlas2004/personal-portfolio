@@ -70,7 +70,7 @@ const Banner = () => {
                   <p>
                   Hi, I'm Mahdi Atlas, a passionate frontend web developer. I specialize in creating responsive, user-friendly web applications using the latest technologies. With a keen eye for design and a strong foundation in coding, I aim to deliver seamless and engaging user experiences. Let's bring your ideas to life on the web!
                   </p>
-                  <a href="/cv.pdf" className="cv" download="My_CV.pdf">
+                  <a href="../assets/cv.pdf" className="cv" download="My_CV.pdf">
                     <button>
                       Download CV <ArrowRightCircle size={25} />
                     </button>
