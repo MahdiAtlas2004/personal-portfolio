@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -8,6 +9,10 @@ import bootstrapSecond from "../assets/img/bootstrap-second.png";
 import bootstrapThird from "../assets/img/bootstrap-third.png";
 import bootstrapFourth from "../assets/img/bootstrap-fourth.png";
 import alisinaPortfolio from "../assets/img/alisina-portfolio.png";
+import adminDashboard from "../assets/img/admin-dashboard.png";
+import magicMatch from "../assets/img/magic-match.png";
+import readingList from "../assets/img/reading-list.png";
+import wordleGame from "../assets/img/wordle-game.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,13 +20,18 @@ const Projects = () => {
   const projects = [
     {
       title: "Kamgar Info Website",
-      description: "Portfolio Website",
+      description: "Informative Website",
       imgUrl: kamgarInfoWebsite,
     },
     {
       title: "Bootstrap First",
       description: "Design & Development",
       imgUrl: bootstrapFirst,
+    },
+    {
+      title: "Admin Dashboard",
+      description: "Dashboard Panel",
+      imgUrl: adminDashboard,
     },
     {
       title: "Business Startup",
@@ -34,14 +44,29 @@ const Projects = () => {
       imgUrl: bootstrapThird,
     },
     {
+      title: "Haidari Portfolio",
+      description: "Portfolio Website",
+      imgUrl: alisinaPortfolio,
+    },
+    {
+      title: "Magic Match",
+      description: "Memory Game",
+      imgUrl: magicMatch,
+    },
+    {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: bootstrapFourth,
     },
     {
-      title: "Haidari Portfolio",
-      description: "Portfolio Website",
-      imgUrl: alisinaPortfolio,
+      title: "Reading List",
+      description: "A reading list app",
+      imgUrl: readingList,
+    },
+    {
+      title: "Wordle Game",
+      description: "Lingo or Wordle Game",
+      imgUrl: wordleGame,
     },
   ];
 
@@ -57,7 +82,11 @@ const Projects = () => {
             <div data-aos="fade-up">
               <h2>Projects</h2>
               <p className="projects-p">
-              In my portfolio, you'll find a collection of projects that highlight my skills in frontend web development. These projects demonstrate my ability to create visually appealing and responsive web pages. Each project reflects my commitment to clean, maintainable code and effective design principles.
+                In my portfolio, you'll find a collection of projects that
+                highlight my skills in frontend web development. These projects
+                demonstrate my ability to create visually appealing and
+                responsive web pages. Each project reflects my commitment to
+                clean, maintainable code and effective design principles.
               </p>
             </div>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -82,12 +111,18 @@ const Projects = () => {
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {projects.map((project, index) => {
+                    {projects.slice(0, 6).map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">Second tab</Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {projects.slice(6, 12).map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
                 <Tab.Pane eventKey="third">Third tab</Tab.Pane>
               </Tab.Content>
             </Tab.Container>
