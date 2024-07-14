@@ -21,7 +21,7 @@ const Banner = () => {
       tick();
     }, delta);
     return () => clearInterval(ticker);
-  }, [text]);
+  });
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -71,7 +71,7 @@ const Banner = () => {
                   <p>
                   Hi, I'm Mahdi Atlas, a passionate frontend web developer. I specialize in creating responsive, user-friendly web applications using the latest technologies. With a keen eye for design and a strong foundation in coding, I aim to deliver seamless and engaging user experiences. Let's bring your ideas to life on the web!
                   </p>
-                  <a href={cv} className="cv" download="Mahdi_Atlas.pdf" target="_blank">
+                  <a href={cv} className="cv" download="Mahdi_Atlas.pdf" target="_blank" rel="noreferrer">
                     <button>
                       Download CV <ArrowRightCircle size={25} />
                     </button>
