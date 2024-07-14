@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -22,51 +21,61 @@ const Projects = () => {
       title: "Kamgar Info Website",
       description: "Informative Website",
       imgUrl: kamgarInfoWebsite,
+      webUrl: "https://kamgar.netlify.app",
     },
     {
-      title: "Bootstrap First",
-      description: "Design & Development",
+      title: "Atlas Shop",
+      description: "Online Shopping Template",
       imgUrl: bootstrapFirst,
+      webUrl: "https://mahdiatlas2004.github.io/Bootstrap-First-Project",
     },
     {
       title: "Admin Dashboard",
       description: "Dashboard Panel",
       imgUrl: adminDashboard,
+      webUrl: "https://atlasadmindashboard.netlify.app",
     },
     {
       title: "Business Startup",
-      description: "Design & Development",
+      description: "Online Shopping Template",
       imgUrl: bootstrapSecond,
+      webUrl: "https://atlastemplate2.netlify.app",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Coming Soon",
+      description: "Coming soon page",
       imgUrl: bootstrapThird,
+      webUrl: "https://atlascomingsoon.netlify.app",
     },
     {
       title: "Haidari Portfolio",
       description: "Portfolio Website",
       imgUrl: alisinaPortfolio,
+      webUrl: "https://alisinahaidari.netlify.app",
     },
     {
       title: "Magic Match",
       description: "Memory Game",
       imgUrl: magicMatch,
+      webUrl: "https://atlas-magic-match.netlify.app",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Admin Dashboard",
+      description: "Dashboard Panel",
       imgUrl: bootstrapFourth,
+      webUrl: "https://atlasdashboardpanel.netlify.app",
     },
     {
       title: "Reading List",
       description: "A reading list app",
       imgUrl: readingList,
+      webUrl: "https://atlasbooklist.netlify.app",
     },
     {
       title: "Wordle Game",
       description: "Lingo or Wordle Game",
       imgUrl: wordleGame,
+      webUrl: "https://atlas-wordle-game.netlify.app",
     },
   ];
 

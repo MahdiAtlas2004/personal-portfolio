@@ -4,6 +4,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import cv from "../assets/cv.pdf";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -70,7 +71,7 @@ const Banner = () => {
                   <p>
                   Hi, I'm Mahdi Atlas, a passionate frontend web developer. I specialize in creating responsive, user-friendly web applications using the latest technologies. With a keen eye for design and a strong foundation in coding, I aim to deliver seamless and engaging user experiences. Let's bring your ideas to life on the web!
                   </p>
-                  <a href="../assets/cv.pdf" className="cv" download="My_CV.pdf">
+                  <a href={cv} className="cv" download="Mahdi_Atlas.pdf" target="_blank">
                     <button>
                       Download CV <ArrowRightCircle size={25} />
                     </button>
