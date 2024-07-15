@@ -12,6 +12,7 @@ import adminDashboard from "../assets/img/admin-dashboard.png";
 import magicMatch from "../assets/img/magic-match.png";
 import readingList from "../assets/img/reading-list.png";
 import wordleGame from "../assets/img/wordle-game.png";
+import contactList from "../assets/img/contact-list.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -76,6 +77,12 @@ const Projects = () => {
       description: "Lingo or Wordle Game",
       imgUrl: wordleGame,
       webUrl: "https://atlas-wordle-game.netlify.app",
+    },
+    {
+      title: "Contact List",
+      description: "Save and manages contacts",
+      imgUrl: contactList,
+      webUrl: "https://atlascontactlist.netlify.app",
     },
   ];
 
