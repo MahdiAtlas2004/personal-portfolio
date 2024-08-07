@@ -13,6 +13,7 @@ import magicMatch from "../assets/img/magic-match.png";
 import readingList from "../assets/img/reading-list.png";
 import wordleGame from "../assets/img/wordle-game.png";
 import contactList from "../assets/img/contact-list.png";
+import notesAppImage from "../assets/img/notesAppImage.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -84,6 +85,12 @@ const Projects = () => {
       imgUrl: contactList,
       webUrl: "https://atlascontactlist.netlify.app",
     },
+    {
+      title: "Notes",
+      description: "Note Mangement System",
+      imgUrl: notesAppImage,
+      webUrl: "https://atlasnotes.vercel.app",
+    }
   ];
 
   useEffect(() => {
