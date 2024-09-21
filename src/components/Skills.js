@@ -71,16 +71,28 @@ const Skills = () => {
                   <h5>Bootstrap</h5>
                 </div>
                 <div className="item">
+                  <img src={meter3} alt="Image5" />
+                  <h5>Tailwind</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="Image8" />
+                  <h5>jQuery</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="Image8" />
+                  <h5>TypeScript</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="Image8" />
+                  <h5>Next.js</h5>
+                </div>
+                <div className="item">
                   <img src={meter2} alt="Image6" />
                   <h5>Git</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="Image7" />
                   <h5>GitHub</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="Image8" />
-                  <h5>jQuery</h5>
                 </div>
               </Carousel>
             </div>
