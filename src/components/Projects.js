@@ -38,8 +38,8 @@ const Projects = () => {
       webUrl: "https://atlasadmindashboard.netlify.app",
     },
     {
-      title: "Business Startup",
-      description: "Online Shopping Template",
+      title: "Adventure Trails",
+      description: "Online Tour",
       imgUrl: bootstrapSecond,
       webUrl: "https://atlastemplate2.netlify.app",
     },
@@ -81,13 +81,13 @@ const Projects = () => {
     },
     {
       title: "Contact List",
-      description: "Save and manages contacts",
+      description: "Save and manage contacts",
       imgUrl: contactList,
       webUrl: "https://atlascontactlist.netlify.app",
     },
     {
       title: "Notes",
-      description: "Note Mangement System",
+      description: "Note Management System",
       imgUrl: notesAppImage,
       webUrl: "https://atlasnotes.vercel.app",
     }
