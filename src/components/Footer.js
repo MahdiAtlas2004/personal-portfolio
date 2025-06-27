@@ -5,6 +5,9 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
 const Footer = () => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  
   return (
     <footer className="footer">
       <Container>
@@ -41,7 +44,7 @@ const Footer = () => {
                 <img src={navIcon3} alt="navIcon3" className="telegram" />
               </a>
             </div>
-            <p>CopyRight 2024. All Right Reserved by Mahdi Atlas</p>
+            <p>CopyRight {currentYear}. All Right Reserved by Mahdi Atlas</p>
           </Col>
         </Row>
       </Container>
